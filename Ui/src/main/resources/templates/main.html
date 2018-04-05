@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>MorseEncode</title>
+</head>
+<body>
+<h1>Enter your word</h1>
+<form th:object="${message}" th:action="@{/}" method="post">
+    <input th:field="*{text}"/>
+    <button type="submit">encode</button>
+<div>
+        <br/><h2 th:text="${encodedWord}"><h2/>
+
+</div>
+</form>
+</body>
+</html>

@@ -20,11 +20,6 @@ public class EncoderEndpoint {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping
-    String sayHello(){
-        return "Enter your word";
-    }
-
     @PostMapping
     String encode(@RequestBody String word){
         return Stream.of(word.split(""))
